@@ -29,8 +29,8 @@ export const Header = () => {
   return (
     <header
       className={`transition-all ease-in delay-200 ${
-        scrolling ? "bg-pink-700/60 backdrop-blur-sm" : "bg-transparent"
-      } flex w-full h-18 justify-between items-center px-8 md:px-20 py-2 z-20 sticky top-0`}
+        scrolling ? "bg-violet-700/60 backdrop-blur-sm" : "bg-transparent"
+      } flex w-full h-16 justify-between items-center px-8 md:px-20 py-2 z-20 sticky top-0`}
     >
       <Image alt="logo-img" src={Logo} height={60} width={60} />
       {/* Header Navs */}

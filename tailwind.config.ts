@@ -9,9 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        /* "hero-img":
-          "url('https://i.tribune.com.pk/media/images/2195721-teensandwomenarenotinferiordriversstudyfinds-1586594953/2195721-teensandwomenarenotinferiordriversstudyfinds-1586594953.jpg')", */
-          "hero-img": "url('https://res.cloudinary.com/dymyb2f2i/image/upload/v1706071857/driving-school/fbjo0ir9bwh4xebkk7ch.jpg')"
+        "hero-img": "url('https://res.cloudinary.com/dymyb2f2i/image/upload/v1706071857/driving-school/fbjo0ir9bwh4xebkk7ch.jpg')"
       },
     },
   },
