@@ -5,10 +5,10 @@ import { heroList } from "@/data/hero-list-courses";
 
 const Hero = () => {
   return (
-    <section className="w-full flex flex-col h-screen py-4 items-center">
+    <section className="w-full flex flex-col h-screen py-4 items-center relative">
 
         {/* BG - IMG */}
-      <div className="bg-hero-img absolute top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat"></div>
+      <div className="-mt-16 bg-hero-img absolute top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat"></div>
 
       {/* hero elements */}
       <div className="flex flex-col w-full h-3/4 py-5 px-10 sm:px-20 items-center sm:items-end justify-between z-10 gap-6">
