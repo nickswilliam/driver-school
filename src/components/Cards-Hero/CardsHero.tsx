@@ -2,8 +2,8 @@
 
 export default function CardsHero() {
   return (
-    <div>
+    <section>
       
-    </div>
+    </section>
   )
 }
