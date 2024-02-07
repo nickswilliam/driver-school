@@ -9,7 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-img": "url('https://res.cloudinary.com/dymyb2f2i/image/upload/v1706071857/driving-school/fbjo0ir9bwh4xebkk7ch.jpg')"
+        "hero-img":
+          "url('https://res.cloudinary.com/dymyb2f2i/image/upload/v1706071857/driving-school/fbjo0ir9bwh4xebkk7ch.jpg')",
+        "about-img":
+          "url('https://res.cloudinary.com/dymyb2f2i/image/upload/v1707275529/driving-school/jnjbyql0zqn6ixalsopo.png')",
       },
     },
   },
