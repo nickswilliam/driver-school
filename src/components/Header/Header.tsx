@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import Logo from "@/assets/logo/logo-q.png";
+import Logo from "@/assets/logo/logo.svg";
 
 import { FaBars, FaAngleDown } from "react-icons/fa";
 
@@ -32,7 +32,7 @@ export const Header = () => {
         scrolling ? "bg-violet-700/60 backdrop-blur-sm" : "bg-transparent"
       } flex w-full h-16 justify-between items-center px-8 md:px-20 py-2 z-20 sticky top-0`}
     >
-      <Image alt="logo-img" src={Logo} height={50} width={50} />
+      <Image alt="logo-img" src={Logo} height={40} width={40} />
       {/* Header Navs */}
       <nav>
         <ul className="hidden items-center justify-around text-purple-100 font-bold text-xl w-50 lg:gap-16 lg:flex">

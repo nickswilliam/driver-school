@@ -13,7 +13,7 @@ const WhyChoose = () => {
         {/* card 1 */}
         <div className="flex flex-col items-center px-4 py-4 gap-3">
           <img
-            src="https://www.svgrepo.com/show/429227/avatar-driving-female.svg"
+            src="https://www.svgrepo.com/show/510353/woman.svg"
             alt="drive-woman"
             className="w-20"
           />
@@ -46,7 +46,7 @@ const WhyChoose = () => {
         {/* card 4 */}
         <div className="flex flex-col items-center px-4 py-4 gap-3">
           <img
-            src="https://www.svgrepo.com/show/505174/community-corrections-bureau.svg"
+            src="https://www.svgrepo.com/show/307646/auto-insurance-car-insurance-insured.svg"
             alt="capacitation"
             className="w-20"
           />
