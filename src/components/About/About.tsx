@@ -11,7 +11,7 @@ import {
 
 export default function About() {
   return (
-    <section className="mt-10 flex flex-col lg:flex-row w-full max-w-7xl py-16 px-10 gap-12 items-center lg:items-start">
+    <section className="mt-10 flex flex-col lg:flex-row w-full max-w-7xl py-16 px-10 gap-12 items-center lg:items-start justify-center">
       <img
         src="https://res.cloudinary.com/dymyb2f2i/image/upload/v1707275529/driving-school/jnjbyql0zqn6ixalsopo.png"
         alt="about-img"
