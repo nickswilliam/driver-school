@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from '@/components/Header/Header'
 import HeaderContact from '@/components/Header/HeaderContact'
 import 'animate.css'
+import Footer from '@/components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <HeaderContact/>
         <Header/>
         {children}
+        <Footer/>
         </body>
     </html>
   )

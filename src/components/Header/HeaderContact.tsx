@@ -3,7 +3,7 @@ import WALogo from "@/assets/logo/whatsapp-logo.png";
 
 const HeaderContact = () => {
   return (
-    <header className="bg-blue-800/90 flex items-baseline justify-center md:flex-row md:h-12 md:justify-end px-2 sm:px-10 py-2 gap-4 w-full z-40 relative">
+    <header className="bg-blue-800 flex items-baseline justify-center md:flex-row md:h-12 md:justify-end px-2 sm:px-10 py-2 gap-4 w-full z-40 relative">
     
     <p className="text-violet-100 text-center hidden sm:block">
       Contactanos:
