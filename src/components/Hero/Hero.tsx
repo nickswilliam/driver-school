@@ -12,8 +12,8 @@ const Hero = () => {
 
       {/* hero elements */}
       <div className="flex flex-col w-full h-3/4 py-5 px-10 sm:px-20 items-center sm:items-end justify-between z-10 gap-6">
-        <h1 className="italic sm:mt-4 text-3xl sm:text-5xl font-semibold text-violet-100 border-b border-violet-300 pb-2 w-full lg:w-1/2 text-left sm:text-left md:text-right animate__animated animate__fadeInRight drop-shadow-sm tracking-normal">
-          Motivando conductoras{" "}
+        <h1 className="sm:mt-4 text-3xl sm:text-5xl font-semibold text-violet-100 border-b border-violet-300 pb-2 w-full lg:w-1/2 text-left sm:text-left md:text-right animate__animated animate__fadeInRight drop-shadow-sm tracking-normal">
+          Motivando Conductoras{" "}
           <span className="text-pink-500">Autoescuela</span>
         </h1>
 

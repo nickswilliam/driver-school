@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "@/assets/logo/logo.svg";
 import { FaPhone, FaWhatsapp, FaMailBulk } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -34,13 +35,13 @@ const Footer = () => {
           </h4>
           <ul className="flex flex-col sm:flex-row justify-around items-start sm:items-center gap-4 text-violet-100">
             <li>
-              <a href="#">Reservas</a>
+              <Link href="/apoint">Reservas</Link>
             </li>
             <li>
-              <a href="#">Pagos con tarjeta</a>
+              <Link href="/payments">Pagos con tarjeta</Link>
             </li>
             <li>
-              <a href="#">Términos y Condiciones</a>
+              <Link href="/tyc">Términos y Condiciones</Link>
             </li>
           </ul>
         </div>

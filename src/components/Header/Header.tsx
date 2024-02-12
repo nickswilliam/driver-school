@@ -2,9 +2,9 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Logo from "@/assets/logo/logo.svg";
+import Link from "next/link";
 
 import { FaBars, FaAngleDown } from "react-icons/fa";
-
 
 export const Header = () => {
   const [isDropDown, setIsDropDown] = useState(false);
@@ -29,7 +29,7 @@ export const Header = () => {
   return (
     <header
       className={`transition-all ease-in delay-200 ${
-        scrolling ? "bg-violet-700/60 backdrop-blur-sm" : "bg-transparent"
+        scrolling ? "bg-violet-700/70 backdrop-blur-sm" : "bg-transparent"
       } flex w-full h-16 justify-between items-center px-8 md:px-20 py-2 z-20 sticky top-0`}
     >
       <Image alt="logo-img" src={Logo} height={40} width={40} />
@@ -37,9 +37,9 @@ export const Header = () => {
       <nav>
         <ul className="hidden items-center justify-around text-purple-100 font-bold text-xl w-50 lg:gap-16 lg:flex">
           <li>
-            <a href="#" className="hover:text-pink-600">
+            <Link href="/" className="hover:text-pink-700">
               Inicio
-            </a>
+            </Link>
           </li>
 
           {/* Dropdown - Cursos */}
@@ -49,44 +49,53 @@ export const Header = () => {
             onMouseLeave={handleMenu}
           >
             {/* text - cursos */}
-            <span className="hover:text-pink-600 flex gap-1 items-center py-0">
-              Cursos <FaAngleDown />
+            <span className="hover:text-pink-700 flex gap-1 items-center py-0">
+              <Link href="/courses">Cursos</Link>
+              <FaAngleDown />
             </span>
 
             {/* Dropdown - menu */}
 
             {isDropDown && (
               <ul className="absolute top-full -left-4 z-30 bg-violet-100 w-[400px] px-8 py-6 rounded-sm shadow-lg flex-col gap-2 mt-0 text-purple-600">
-                <li className="hover:text-pink-600">
-                  Practicas de Auto - Inicial
+                <li className="hover:text-pink-700">
+                  <Link href="/courses/car-initial">
+                    Practicas de Auto - Inicial
+                  </Link>
                 </li>
-                <li className="hover:text-pink-600">
-                  Practicas de Auto - Intermedio{" "}
+                <li className="hover:text-pink-700">
+                  <Link href="/courses/car-medium">
+                    Practicas de Auto - Intermedio{" "}
+                  </Link>
                 </li>
-                <li className="hover:text-pink-600">Examen de Manejo</li>
-                <li className="hover:text-pink-600">Contenido teórico</li>
+                <li className="hover:text-pink-700">
+                  <Link href="/courses/exam">Examen de Manejo</Link>
+                </li>
+                <li className="hover:text-pink-700">
+                  <Link href="/courses/content">Contenido teórico</Link>
+                </li>
               </ul>
             )}
           </li>
           <li>
-            <a href="#" className="hover:text-pink-600">
+            <Link href="/appoint" className="hover:text-pink-700">
               Reservar
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-pink-500">
+            <Link href="/payments" className="hover:text-pink-700">
               Pagos
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-pink-500">
+            <Link href="/gallery" className="hover:text-pink-700">
               Galería
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-pink-500">
+            <Link href="/contact" className="hover:text-pink-700">
               Contacto
-            </a>
+            </Link>
           </li>
         </ul>
 

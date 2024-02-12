@@ -8,7 +8,7 @@ const HeaderContact = () => {
       Contactanos:
     </p>
 
-    <a href="tel:+541122334455" className="text-orange-500 flex items-center gap-1 justify-center">
+    <a href="tel:+541122334455" className="text-pink-400 flex items-center gap-1 justify-center">
       <span className="text-violet-100">Tel:</span> 1122334455
     </a>
 
