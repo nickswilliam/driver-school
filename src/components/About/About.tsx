@@ -11,7 +11,7 @@ import {
 
 export default function About() {
   return (
-    <section className="mt-10 flex flex-col lg:flex-row w-full max-w-7xl py-16 px-10 gap-12 items-start place-self-center">
+    <section className="mt-10 flex flex-col lg:flex-row w-full max-w-7xl py-16 px-10 gap-12 items-center lg:items-start">
       <img
         src="https://res.cloudinary.com/dymyb2f2i/image/upload/v1707275529/driving-school/jnjbyql0zqn6ixalsopo.png"
         alt="about-img"
@@ -19,14 +19,14 @@ export default function About() {
       />
 
       <div className="self-start flex flex-col gap-4">
-        <h2 className="text-3xl ">
+        <h2 className="text-3xl text-center sm:text-left">
           Bienvenida a Autoescuela{" "}
           <span className="text-pink-600">Motivando Conductoras</span>. Un
           espacio seguro para mujeres hecho X mujeres que desean aprender a
           manejar y obtener su licencia de conducir por primera vez
         </h2>
 
-        <h3 className="text-xl text-pink-600">Disponibilidad Zonal:</h3>
+        <h3 className="text-xl text-pink-600 text-center sm:text-left">Disponibilidad Zonal:</h3>
 
         {/* Contenedor de acordions */}
         <div className="flex flex-col">
