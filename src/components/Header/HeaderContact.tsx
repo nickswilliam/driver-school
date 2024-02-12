@@ -1,5 +1,4 @@
-import Image from "next/image";
-import WALogo from "@/assets/logo/whatsapp-logo.png";
+import { FaWhatsapp } from 'react-icons/fa'
 
 const HeaderContact = () => {
   return (
@@ -17,7 +16,7 @@ const HeaderContact = () => {
       href="https://api.whatsapp.com/send/?phone=541122334455"
       className="flex gap-1 items-center justify-center text-violet-100 bg-green-600 px-2 py-1 rounded-md"
     >
-      <Image alt="wa-logo" src={WALogo} width={undefined} className="w-4 h-4" />
+      <FaWhatsapp className="text-violet-100 h-4 w-4"/>
       Whatsappeanos
     </a>
   </header>

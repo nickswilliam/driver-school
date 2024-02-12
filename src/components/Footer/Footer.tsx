@@ -32,7 +32,7 @@ const Footer = () => {
           <h4 className="text-lg text-pink-400 uppercase font-bold">
             Links Útiles
           </h4>
-          <ul className="flex flex-col sm:flex-row justify-around items-start sm:items-center gap-4 text-violet-100 text-sm">
+          <ul className="flex flex-col sm:flex-row justify-around items-start sm:items-center gap-4 text-violet-100">
             <li>
               <a href="#">Reservas</a>
             </li>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         {/* Contact */}
-        <div className="flex flex-col gap-4 md:justify-self-end">
+        <div className="flex flex-col gap-4 lg:justify-self-end">
           <h4 className="text-lg font-bold text-pink-400 uppercase">
             Contacto
           </h4>
@@ -80,7 +80,7 @@ const Footer = () => {
         
       </div>
 
-      <div className="w-full bg-gray-800 px-10 py-2 flex justify-center">
+      <div className="w-full bg-gray-800 px-10 py-2 flex justify-center text-sm italic uppercase font-semibold">
         <h6 className="text-violet-300 text-center">© Copyright Motivando Conductoras 2024 - Created by <a href="https://instagram.com/nickswilliam" className="text-pink-300" target="_blank">@nickswilliam</a></h6>
       </div>
     </footer>
