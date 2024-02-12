@@ -4,6 +4,7 @@
 import About from "@/components/About/About";
 import CardsHero from "@/components/Cards-Hero/CardsHero";
 import Hero from "@/components/Hero/Hero";
+import WhyChoose from "@/components/WhyChoose/WhyChoose";
 import Home from "@/pages/Home/Home";
 
 
@@ -13,6 +14,7 @@ export default function Page() {
       <Hero/>
       <CardsHero/>
       <About/>
+      <WhyChoose/>
     </Home>
   );
 }

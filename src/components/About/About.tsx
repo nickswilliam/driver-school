@@ -2,17 +2,20 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function About() {
-  const [isDrop, setIsDrop] = useState(false);
-
-  const handleDropdown = () => setIsDrop(!isDrop);
-
   return (
-    <section className="mt-10 flex w-full max-w-7xl py-16 px-10 items-center gap-12">
+    <section className="mt-10 flex flex-col lg:flex-row w-full max-w-7xl py-16 px-10 gap-12 items-start place-self-center">
       <img
         src="https://res.cloudinary.com/dymyb2f2i/image/upload/v1707275529/driving-school/jnjbyql0zqn6ixalsopo.png"
         alt="about-img"
+        className="object-contain self-center lg:self-start order-2 lg:order-none"
       />
 
       <div className="self-start flex flex-col gap-4">
@@ -26,67 +29,57 @@ export default function About() {
         <h3 className="text-xl text-pink-600">Disponibilidad Zonal:</h3>
 
         {/* Contenedor de acordions */}
-        <div className="flex flex-col gap-4">
-
+        <div className="flex flex-col">
           {/* acordion1 */}
-          <div className="flex flex-col gap-4 bg-violet-100 py-4 px-8">
-            
-              <button onClick={handleDropdown} className="w-full flex items-center gap-4 text-xl">
-                {isDrop ? <FaMinus size={12}/> : <FaPlus size={12}/>}
-                Capital Federal
-              </button>
-              
-            
-
-            {isDrop && (
-              <ul className="text-md list-disc ml-12 text-gray-600">
-                <li>Balvanera</li>
-                <li>Liniers</li>
-                <li>Villa Luro</li>
-                <li>Flores</li>
-              </ul>
-            )}
+          <div className="flex flex-col gap-4 py-2 px-4">
+            <Accordion type="single" collapsible className="bg-violet-100 px-4">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Capital Federal</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="text-md list-disc ml-12 text-gray-600">
+                    <li>Balvanera</li>
+                    <li>Liniers</li>
+                    <li>Villa Luro</li>
+                    <li>Flores</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
 
           {/* acordion 2 */}
-          <div className="flex flex-col gap-4 bg-violet-100 py-4 px-8">
-            
-              <button onClick={handleDropdown} className="w-full flex items-center gap-4 text-xl">
-                {isDrop ? <FaMinus size={12}/> : <FaPlus size={12}/>}
-                Zona Oeste
-              </button>
-              
-            
-
-            {isDrop && (
-              <ul className="text-md list-disc ml-12 text-gray-600">
-                <li>Merlo</li>
-                <li>Moron</li>
-                <li>Hurlingham Luro</li>
-                <li>Ciudadela</li>
-                <li>Ramos Mejia</li>
-              </ul>
-            )}
+          <div className="flex flex-col gap-4 py-2 px-4">
+            <Accordion type="single" collapsible className="bg-violet-100 px-4">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Zona Oeste</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="text-md list-disc ml-12 text-gray-600">
+                    <li>Merlo</li>
+                    <li>Moron</li>
+                    <li>Hurlingham Luro</li>
+                    <li>Ciudadela</li>
+                    <li>Ramos Mejia</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
 
           {/* acordion 3 */}
-          <div className="flex flex-col gap-4 bg-violet-100 py-4 px-8">
-            
-              <button onClick={handleDropdown} className="w-full flex items-center gap-4 text-xl">
-                {isDrop ? <FaMinus size={12}/> : <FaPlus size={12}/>}
-                Zona Norte
-              </button>
-              
-            
-
-            {isDrop && (
-              <ul className="text-md list-disc ml-12 text-gray-600">
-                <li>San Isidro</li>
-                <li>Vicente Lopez</li>
-                <li>El Palomar</li>
-                <li>Tigre</li>
-              </ul>
-            )}
+          <div className="flex flex-col gap-4  py-2 px-4">
+            <Accordion type="single" collapsible className="bg-violet-100 px-4">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Zona Norte</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="text-md list-disc ml-12 text-gray-600">
+                    <li>San Isidro</li>
+                    <li>Vicente Lopez</li>
+                    <li>El Palomar</li>
+                    <li>Tigre</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </div>
