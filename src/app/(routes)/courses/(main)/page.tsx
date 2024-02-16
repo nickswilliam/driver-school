@@ -3,7 +3,7 @@ import { FaCar, FaCarSide, FaGraduationCap, FaBook } from "react-icons/fa";
 
 const Courses = () => {
   return (
-    <div className="mt-2 w-full max-w-7xl py-16 px-5 sm:px-10 flex flex-wrap items-center gap-4 justify-center z-10">
+    <div className="-mt-4 w-full max-w-7xl py-16 px-5 sm:px-10 flex flex-wrap items-center gap-4 justify-center z-10">
       {/* card 1 */}
       <Link
         href="/courses/car-initial"
