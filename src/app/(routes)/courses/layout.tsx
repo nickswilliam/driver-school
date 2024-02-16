@@ -1,11 +1,11 @@
 "use client";
-import { Courses as CoursesContainer } from "@/pages/Courses/Courses";
+import  Coursescontainer from "@/pages/Courses/Courses";
 import { usePathname } from "next/navigation";
 
 const CourseLayout = ({ children }: { children: React.ReactNode }) => {
   const path = usePathname();
   return (
-    <CoursesContainer>
+    <Coursescontainer>
       <section className="w-full h-5/6 relative py-16 px-5 sm:px-10 flex flex-col items-center">
         <div className="-mt-16 bg-hero-courses w-full h-[350px] absolute top-0 left-0 bg-center-right bg-cover -z-10"></div>
 
@@ -21,7 +21,7 @@ const CourseLayout = ({ children }: { children: React.ReactNode }) => {
       
 
       {path !== "/courses" && children}
-    </CoursesContainer>
+    </Coursescontainer>
   );
 };
 export default CourseLayout;

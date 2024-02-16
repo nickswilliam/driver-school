@@ -1,4 +1,4 @@
-export const Courses = ({children}: {children: React.ReactNode}) => {
+const Courses = ({children}: {children: React.ReactNode}) => {
   return (
     <main className="flex flex-col w-full">
         {children}
@@ -6,3 +6,4 @@ export const Courses = ({children}: {children: React.ReactNode}) => {
   )
 }
 
+export default Courses
