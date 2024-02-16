@@ -13,7 +13,7 @@ const Hero = () => {
       {/* hero elements */}
       <div className="flex flex-col w-full h-3/4 py-5 px-10 sm:px-20 items-end sm:items-end justify-between z-10 gap-6">
         <h1 className="uppercase italic sm:mt-4 text-3xl sm:text-5xl font-semibold text-violet-100 py-2 bg-pink-400/80 backdrop-blur-sm w-full lg:w-1/2 text-left sm:text-center rounded-md animate__animated animate__fadeInRight drop-shadow-sm tracking-normal">
-          Motivando <span className="text-pink-200">Conductoras</span> 
+          Motivando <span className="text-pink-100">Conductoras</span> 
         </h1>
 
         <ul className="w-full flex flex-col gap-6 text-violet-100 font-normal text-[21px] sm:text-2xl items:center sm:items-end">
