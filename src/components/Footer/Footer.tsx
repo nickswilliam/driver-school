@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-800 w-full flex flex-col items-center">
+    <footer className="bg-blue-800 w-full flex flex-col items-center z-10">
       {/* container */}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center p-8 sm:p-12 md:p-16 gap-10">
         {/* left icon container */}
@@ -30,12 +30,12 @@ const Footer = () => {
 
         {/* links footer */}
         <div className="flex flex-col sm:items-center gap-4">
-          <h4 className="text-lg text-pink-400 uppercase font-bold">
+          <h4 className="text-lg text-pink-400 uppercase font-bold text-center">
             Links Útiles
           </h4>
-          <ul className="flex flex-col sm:flex-row justify-around items-start sm:items-center gap-4 text-violet-100">
+          <ul className="flex flex-col sm:flex-row justify-around items-start sm:items-center gap-4 text-violet-100 text-center">
             <li>
-              <Link href="/apoint">Reservas</Link>
+              <Link href="/appoint">Reservas</Link>
             </li>
             <li>
               <Link href="/payments">Pagos con tarjeta</Link>

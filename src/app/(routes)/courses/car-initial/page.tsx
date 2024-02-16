@@ -1,6 +1,8 @@
 const CarInitial = () => {
   return (
-    <div>Auto inicial</div>
+    <section>
+      <h2>Practicas de Auto:</h2>
+    </section>
   )
 }
 export default CarInitial

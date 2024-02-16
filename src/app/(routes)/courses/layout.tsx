@@ -1,9 +1,26 @@
-const CourseLayout = ({children}: {children: React.ReactNode}) => {
+"use client";
+import { Courses as CoursesContainer } from "@/pages/Courses/Courses";
+import { usePathname } from "next/navigation";
+
+const CourseLayout = ({ children }: { children: React.ReactNode }) => {
+  const path = usePathname();
   return (
-    <div>
-        Cursos:
-        {children}
-    </div>
-  )
-}
-export default CourseLayout
+    <CoursesContainer>
+      <section className="w-full h-5/6 relative py-16 px-5 sm:px-10 flex flex-col items-center">
+        <div className="-mt-16 bg-hero-courses w-full h-[350px] absolute top-0 left-0 bg-center-right bg-cover -z-10"></div>
+
+        {/* Container - hero courses */}
+        <div className="w-full flex flex-col items-center sm:items-end justify-center py-5 px-5 sm:px-10 relative z-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-pink-100 uppercase font-bold bg-violet-500/70 backdrop-blur-sm px-12 py-2 rounded-md italic sm:text-right animate__animated animate__bounceInDown">
+            Nuestros Cursos
+          </h1>
+        </div>
+        {path === "/courses" && children}
+      </section>
+      
+
+      {path !== "/courses" && children}
+    </CoursesContainer>
+  );
+};
+export default CourseLayout;
