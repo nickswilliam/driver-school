@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Logo from "@/assets/logo/logo.svg";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { FaBars, FaAngleDown } from "react-icons/fa";
 
@@ -11,7 +12,11 @@ export const Header = () => {
   const handleMenu = () => setIsDropDown((prev) => !prev);
 
   const [scrolling, setScrolling] = useState(false);
+  const path = usePathname()
+
+
   useEffect(() => {
+
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setScrolling(true);
