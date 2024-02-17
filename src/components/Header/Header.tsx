@@ -25,22 +25,22 @@ export const Header = () => {
       }
     };
 
-    /* const handleResize = () => {
+    const handleResize = () => {
       const newWindowWidth = window.innerWidth;
       setWindowWidth(newWindowWidth);
 
       if (newWindowWidth > 1024 && toggle) {
         setToggle(false);
       }
-    }; */
+    };
 
     window.addEventListener("scroll", handleScroll);
     /* window.addEventListener("resize", handleResize); */
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      /* window.removeEventListener("resize", handleResize); */
+      window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [toggle]);
 
   return (
     <header
