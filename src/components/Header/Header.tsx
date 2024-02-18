@@ -83,7 +83,7 @@ export const Header = () => {
             className="cursor-pointer relative flex flex-col items-center w-full py-2"
             onMouseEnter={handleMenu}
             onMouseLeave={handleMenu}
-            onClick={()=>{toggle && isDropDown && setIsDropDown(false)}}
+            onClick={handleMenu}
           >
             {/* text - cursos */}
             <span className="hover:text-pink-700 flex gap-1 items-center text-center">
