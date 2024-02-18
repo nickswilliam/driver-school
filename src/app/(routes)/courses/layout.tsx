@@ -14,7 +14,7 @@ const CourseLayout = ({ children }: { children: React.ReactNode }) => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl text-pink-100 uppercase font-bold bg-violet-500/70 backdrop-blur-sm px-12 py-2 rounded-md italic sm:text-right animate__animated animate__bounceInDown">
             Nuestros Cursos
           </h1>
-          <p className="text-violet-100 text-xl font-semibold drop-shadow-lg text-center">*Todos nuestros cursos están a cargo de instructoras femeninas.</p>
+          <p className="text-violet-100 text-xl font-semibold drop-shadow-lg text-center animate__animated animate__fadeInRight">*Todos nuestros cursos están a cargo de instructoras femeninas.</p>
         </div>
         {path === "/courses" && children}
       </section>

@@ -65,11 +65,23 @@ export const Header = () => {
           } `}
         >
           <li
-            className="block lg:hidden text-4xl self-start text-violet-600 hover:text-violet-400 transition-all ease-out delay-150 cursor-pointer"
+            className="flex lg:hidden text-4xl hover:text-violet-400 transition-all ease-out delay-150 cursor-pointer w-full bg-blue-600 rounded-sm px-4 py-2 
+            justify-between items-center mb-4"
             title="Cerrar menu"
             onClick={toggleMenu}
           >
-            <AiOutlineClose />
+            <div className="flex items-center gap-3">
+            <Image src={Logo} width={30} height={30} alt="logo-footer" />
+            <div className="flex flex-col justify-center items-start">
+              <h4 className="uppercase font-bold text-sm text-pink-400">
+                Motivando
+              </h4>
+              <h5 className="uppercase font-bold text-sm text-violet-100">
+                Conductoras
+              </h5>
+            </div>
+          </div>
+            <AiOutlineClose className="text-violet-100 hover:text-violet-300"/>
           </li>
 
           <li>
@@ -101,20 +113,20 @@ export const Header = () => {
                 }`}
               >
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/car-initial" onClick={()=>{toggle && setToggle(false) || !toggle && isDropDown && setIsDropDown(false)}}>
+                  <Link href="/courses/car-initial" onClick={()=>{toggle && setToggle(false) }}>
                     Practicas de Auto - Inicial
                   </Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/car-medium" onClick={()=>{toggle && setToggle(false) || !toggle && isDropDown && setIsDropDown(false)}}>
+                  <Link href="/courses/car-medium" onClick={()=>{toggle && setToggle(false) }}>
                     Practicas de Auto - Intermedio{" "}
                   </Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/exam" onClick={()=>{toggle && setToggle(false) || !toggle && isDropDown && setIsDropDown(false)}}>Examen de Manejo</Link>
+                  <Link href="/courses/exam" onClick={()=>{toggle && setToggle(false) }}>Examen de Manejo</Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/content" onClick={()=>{toggle && setToggle(false) || !toggle && isDropDown && setIsDropDown(false)}}>Contenido teórico</Link>
+                  <Link href="/courses/content" onClick={()=>{toggle && setToggle(false) }}>Contenido teórico</Link>
                 </li>
               </ul>
             )}

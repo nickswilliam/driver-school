@@ -2,6 +2,7 @@
 "use client";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 import { heroList } from "@/data/hero-list-courses";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -28,9 +29,11 @@ const Hero = () => {
           ))}
         </ul>
 
-        <button className="border-2 rounded-sm py-3 px-12 text-xl border-pink-500 text-pink-600 font-bold bg-violet-100/50 hover:bg-pink-500/40 hover:text-pink-100 animate__animated animate__fadeInUp animate__delay_2s">
+        <Link href='/contact'>
+        <button className="self-center sm:self-end border-2 rounded-sm py-3 px-12 text-xl border-pink-500 text-pink-600 font-bold bg-violet-100/50 hover:bg-pink-500/40 hover:text-pink-100 animate__animated animate__fadeInUp animate__delay_2s">
           Contactanos
         </button>
+        </Link>
       </div>
     </section>
   );

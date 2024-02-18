@@ -48,7 +48,7 @@ export default function About() {
           </div>
 
           {/* acordion 2 */}
-          <div className="flex flex-col gap-4 py-2 px-4">
+          <div className="flex flex-col gap-4 py-2 px-4 rounded-md">
             <Accordion type="single" collapsible className="bg-violet-100 px-4">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Zona Oeste</AccordionTrigger>
