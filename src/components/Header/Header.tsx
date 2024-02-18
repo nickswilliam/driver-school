@@ -12,11 +12,12 @@ export const Header = () => {
   const [isDropDown, setIsDropDown] = useState(false);
   const handleMenu = () => setIsDropDown((prev) => !prev);
   const toggleMenu = () => setToggle((prev) => !prev);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
+    
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setScrolling(true);
@@ -60,7 +61,7 @@ export const Header = () => {
           } `}
         >
           <li
-            className="block lg:hidden text-4xl self-start text-violet-600 hover:text-violet-400 transition-all ease-out delay-150"
+            className="block lg:hidden text-4xl self-start text-violet-600 hover:text-violet-400 transition-all ease-out delay-150 cursor-pointer"
             title="Cerrar menu"
             onClick={toggleMenu}
           >
@@ -90,7 +91,7 @@ export const Header = () => {
               <ul
                 className={`${
                   !toggle
-                    ? "absolute top-full -left-4 z-30 bg-violet-100 w-[400px] px-8 py-6 rounded-sm shadow-lg flex-col gap-2 mt-0 text-purple-600"
+                    ? "absolute top-full -left-4 z-30 bg-violet-100 w-[400px] px-8 py-6 rounded-sm shadow-lg flex-col gap-2 mt-2 text-purple-600"
                     : "mt-2 items-center flex flex-col gap-2 py-4 w-full"
                 }`}
               >
