@@ -57,7 +57,7 @@ export const Header = () => {
           className={`${
             !toggle
               ? "hidden items-center justify-around text-purple-100 font-bold text-xl w-50 lg:gap-16 lg:flex"
-              : "flex flex-col items-center justify-around text-center absolute top-0 left-0 bg-violet-100 font-bold rounded-md w-full h-screen text-3xl text-gray-600 gap-3 py-8 px-10 z-20 shadow-lg animate__animated animate__fadeInRight animate__faster"
+              : "flex flex-col items-center justify-around text-center absolute top-0 left-0 bg-violet-100 font-bold rounded-md w-full h-auto text-3xl text-gray-600 gap-3 py-8 px-10 z-20 shadow-lg animate__animated animate__fadeInDown animate__faster"
           } `}
         >
           <li
@@ -141,6 +141,7 @@ export const Header = () => {
           <FaBars className="text-purple-100" size={26} />
         </button>
       </nav>
+      {toggle && <div className="w-full z-10 bg-slate-900/50 blur-sm h-screen fixed top-0 left-0" onClick={toggleMenu}></div>}
     </header>
   );
 };
