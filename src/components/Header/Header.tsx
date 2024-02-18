@@ -34,6 +34,7 @@ export const Header = () => {
 
       if (newWindowWidth > 1024 && toggle) {
         setToggle(false);
+    
       }
     };
 
@@ -44,6 +45,7 @@ export const Header = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [toggle]);
+
 
   return (
     <header
@@ -71,20 +73,20 @@ export const Header = () => {
           </li>
 
           <li>
-            <Link href="/" className="hover:text-pink-700" onClick={toggleMenu}>
+            <Link href="/" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
               Inicio
             </Link>
           </li>
 
           {/* Dropdown - Cursos */}
           <li
-            className="cursor-pointer relative flex flex-col items-center w-full"
+            className="cursor-pointer relative flex flex-col items-center w-full py-2"
             onMouseEnter={handleMenu}
             onMouseLeave={handleMenu}
           >
             {/* text - cursos */}
-            <span className="hover:text-pink-700 flex gap-1 items-center py-0 text-center">
-              <Link href="/courses" onClick={toggleMenu}>Cursos</Link>
+            <span className="hover:text-pink-700 flex gap-1 items-center text-center">
+              <Link href="/courses" onClick={()=>{toggle && setToggle(false)}}>Cursos</Link>
               <FaAngleDown />
             </span>
 
@@ -93,47 +95,47 @@ export const Header = () => {
               <ul
                 className={`${
                   !toggle
-                    ? "absolute top-full -left-4 z-30 bg-violet-100 w-[400px] px-8 py-6 rounded-sm shadow-lg flex-col gap-2 mt-2 text-purple-600"
-                    : "mt-2 items-center flex flex-col gap-2 py-4 w-full border-t border-pink-500 border-b"
+                    ? "absolute top-full -left-4 z-30 bg-violet-100 w-[400px] px-8 py-6 rounded-sm shadow-lg flex-col gap-2 mt-0 text-purple-600"
+                    : "mt-4 items-center flex flex-col gap-2 py-4 w-full border-t border-pink-500 border-b"
                 }`}
               >
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/car-initial" onClick={toggleMenu}>
+                  <Link href="/courses/car-initial" onClick={()=>{toggle && setToggle(false) || !toggle && isDropDown && setIsDropDown(false)}}>
                     Practicas de Auto - Inicial
                   </Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/car-medium" onClick={toggleMenu}>
+                  <Link href="/courses/car-medium" onClick={()=>{toggle && setToggle(false) || !toggle && isDropDown && setIsDropDown(false)}}>
                     Practicas de Auto - Intermedio{" "}
                   </Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/exam" onClick={toggleMenu}>Examen de Manejo</Link>
+                  <Link href="/courses/exam" onClick={()=>{toggle && setToggle(false) || !toggle && isDropDown && setIsDropDown(false)}}>Examen de Manejo</Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/content" onClick={toggleMenu}>Contenido teórico</Link>
+                  <Link href="/courses/content" onClick={()=>{toggle && setToggle(false) || !toggle && isDropDown && setIsDropDown(false)}}>Contenido teórico</Link>
                 </li>
               </ul>
             )}
             
           </li>
           <li>
-            <Link href="/appoint" className="hover:text-pink-700" onClick={toggleMenu}>
+            <Link href="/appoint" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
               Reservar
             </Link>
           </li>
           <li>
-            <Link href="/payments" className="hover:text-pink-700" onClick={toggleMenu}>
+            <Link href="/payments" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
               Pagos
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="hover:text-pink-700" onClick={toggleMenu}>
+            <Link href="/gallery" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
               Galería
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-pink-700" onClick={toggleMenu}>
+            <Link href="/contact" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
               Contacto
             </Link>
           </li>
@@ -143,7 +145,7 @@ export const Header = () => {
           <FaBars className="text-purple-100" size={26} />
         </button>
       </nav>
-      {toggle && <div className="w-full z-10 bg-slate-900/50 blur-sm h-screen fixed top-0 left-0" onClick={toggleMenu}></div>}
+      {toggle && <div className="w-full z-10 bg-slate-900/50 backdrop-blur-sm h-screen fixed top-0 left-0" onClick={toggleMenu}></div>}
     </header>
   );
 };
