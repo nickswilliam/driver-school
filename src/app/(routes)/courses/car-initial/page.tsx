@@ -13,9 +13,9 @@ const CarInitial = () => {
       </div>
 
       {/* top main - content */}
-      <div className="self-center max-w-7xl flex flex-col items-center gap-8 py-10 px-10">
+      <div className="self-center max-w-7xl flex flex-col items-center gap-8 py-5 px-10">
         {/* Top img & text */}
-        <div className="flex items-center -mt-16 gap-6 flex-col lg:flex-row">
+        <div className="-mt-16 flex items-center gap-6 flex-col lg:flex-row py-10">
           <img
             src="https://res.cloudinary.com/dymyb2f2i/image/upload/v1708290265/driving-school/zoi7ilcsk5wgmnlqnin9.png"
             alt="car-course-img"
@@ -30,7 +30,7 @@ const CarInitial = () => {
         </div>
 
         {/* sub title - and paragraph */}
-        <h2 className="-mt-8 text-4xl font-semibold text-pink-600 text-center">
+        <h2 className="text-4xl font-semibold text-pink-600 text-center">
           ¿Que aprenderas en este <span className="text-blue-700">Nivel?</span>
         </h2>
         <p className="text-xl text-center">
