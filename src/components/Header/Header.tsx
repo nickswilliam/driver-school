@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Logo from "@/assets/logo/logo.svg";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { FaBars, FaAngleDown } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
@@ -13,6 +14,7 @@ export const Header = () => {
   const handleMenu = () => setIsDropDown((prev) => !prev);
   const toggleMenu = () => setToggle((prev) => !prev);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+  const path = usePathname();
 
   const [scrolling, setScrolling] = useState(false);
 
@@ -69,7 +71,7 @@ export const Header = () => {
           </li>
 
           <li>
-            <Link href="/" className="hover:text-pink-700">
+            <Link href="/" className="hover:text-pink-700" onClick={toggleMenu}>
               Inicio
             </Link>
           </li>
@@ -82,7 +84,7 @@ export const Header = () => {
           >
             {/* text - cursos */}
             <span className="hover:text-pink-700 flex gap-1 items-center py-0 text-center">
-              <Link href="/courses">Cursos</Link>
+              <Link href="/courses" onClick={toggleMenu}>Cursos</Link>
               <FaAngleDown />
             </span>
 
@@ -96,42 +98,42 @@ export const Header = () => {
                 }`}
               >
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/car-initial">
+                  <Link href="/courses/car-initial" onClick={toggleMenu}>
                     Practicas de Auto - Inicial
                   </Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/car-medium">
+                  <Link href="/courses/car-medium" onClick={toggleMenu}>
                     Practicas de Auto - Intermedio{" "}
                   </Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/exam">Examen de Manejo</Link>
+                  <Link href="/courses/exam" onClick={toggleMenu}>Examen de Manejo</Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/content">Contenido teórico</Link>
+                  <Link href="/courses/content" onClick={toggleMenu}>Contenido teórico</Link>
                 </li>
               </ul>
             )}
             
           </li>
           <li>
-            <Link href="/appoint" className="hover:text-pink-700">
+            <Link href="/appoint" className="hover:text-pink-700" onClick={toggleMenu}>
               Reservar
             </Link>
           </li>
           <li>
-            <Link href="/payments" className="hover:text-pink-700">
+            <Link href="/payments" className="hover:text-pink-700" onClick={toggleMenu}>
               Pagos
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="hover:text-pink-700">
+            <Link href="/gallery" className="hover:text-pink-700" onClick={toggleMenu}>
               Galería
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-pink-700">
+            <Link href="/contact" className="hover:text-pink-700" onClick={toggleMenu}>
               Contacto
             </Link>
           </li>
