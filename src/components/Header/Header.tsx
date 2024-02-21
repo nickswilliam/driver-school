@@ -158,7 +158,7 @@ export const Header = () => {
           <FaBars className="text-purple-100" size={26} />
         </button>
       </nav>
-      {toggle && <div className="w-full z-10 bg-slate-900/50 backdrop-blur-sm h-screen fixed top-0 left-0" onClick={toggleMenu}></div>}
+      {toggle && <div className="w-full z-10 bg-slate-900/70 h-screen fixed top-0 left-0" onClick={toggleMenu}></div>}
     </header>
   );
 };

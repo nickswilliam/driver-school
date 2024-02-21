@@ -6,7 +6,7 @@ const CourseLayout = ({ children }: { children: React.ReactNode }) => {
   const path = usePathname();
   return (
     <Coursescontainer>
-      <section className="w-full h-5/6 relative py-16 px-5 sm:px-10 flex flex-col items-center">
+      <section className="w-full h-5/6 relative pt-6 sm:pt-10 px-5 sm:px-10 flex flex-col items-center">
         <div className="-mt-16 bg-hero-courses w-full h-[350px] absolute top-0 left-0 bg-center-right bg-cover -z-10"></div>
 
         {/* Container - hero courses */}
