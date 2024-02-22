@@ -48,7 +48,7 @@ export const ConsultForm = ({ id }: IdOfCourse) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid grid-cols-2 gap-x-8 gap-y-10"
+        className="grid sm:grid-cols-2 gap-x-8 gap-y-10"
       >
         <FormField
           control={form.control}
