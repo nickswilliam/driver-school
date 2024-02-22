@@ -4,14 +4,14 @@ import { coursesPrices } from "@/data/car-courses-prices";
 import CoursesCards from "@/components/CoursesCards/CoursesCards";
 const CarInitial = () => {
   return (
-    <section className="w-full flex flex-col gap-4 bg-violet-100">
+    <section className="w-full flex flex-col gap-4 bg-violet-100 pb-12">
       {/* top title */}
       <div className="bg-violet-300/70 px-5 sm:px-10 py-2 flex flex-col gap">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-pink-600">
           Practicas de Auto:
         </h2>
-        <h3 className="text-xl text-violet-500 font-semibold">
-          Nivel - Inicial
+        <h3 className="text-xl text-gray-600 font-semibold">
+          Inicial - Intermedio - Avanzado
         </h3>
       </div>
 
@@ -25,23 +25,26 @@ const CarInitial = () => {
             className="w-[500px] object-fill object-center"
           />
           <p className="text-xl text-violet-700">
-            Brindamos cursos de manejo a domicilio, dentro de de Capital Federal
-            y Gran Buenos Aires. Los cursos se brindan en tránsito real o pista,
-            dependiendo de la zona en dónde la alumna decida tomar la clase. Las
-            clases duran 1hr y el servicio es puerta a puerta.
+            Los cursos de manejo son con clases a domicilio, dentro de Capital
+            Federal y Gran Buenos Aires. Las clases se brindan en espacios de
+            tránsito real o bien en pista de aprendizaje, dependiendo en la zona
+            en donde la alumna decida tomar la clase. Las clases duran 1h y el
+            servicio es de puerta a puerta.
           </p>
         </div>
 
         {/* sub title - and paragraph */}
         <h2 className="text-3xl sm:text-4xl font-semibold text-pink-600 text-center">
-          ¿Que aprenderas en este <span className="text-blue-700">Nivel?</span>
+          ¿Que aprenderas en nuestro{" "}
+          <span className="text-blue-700">Curso?</span>
         </h2>
         <p className="text-lg sm:text-xl text-center">
-          Aprenderas a dar tus primeros pasos en la conducción. Desde como
-          soltar correctamente el embrague del vehiculo, caja de cambios, uso
-          del freno de mano, regulación de aceleración, etc. Comprenderas que
-          cosas son esenciales desde 0 para una correcta conducción y dar ese
-          salto a convertirte en conductora.
+          Aprenderas a dar tus primeros pasos en la conducción, si es la primera
+          vez que vas a manejar. En el caso de que ya cuentes con algo de
+          experiencia, se lo podés comentar a tu instructora, y las clases se
+          ajustarán a tus aptitudes. Comprenderas que cosas son esenciales desde
+          0 para una correcta conducción y dar ese salto a convertirte en
+          conductora.
         </p>
 
         {/* second sub title */}
@@ -81,17 +84,13 @@ const CarInitial = () => {
         Precios de los cursos
       </h2>
       {/* cards prices - container*/}
-      <div className="mt-6 w-full max-w-7xl px-10 py-10 flex justify-center flex-wrap gap-4">
+      <div className="self-center mt-6 w-full max-w-7xl px-10 pt-10 pb-16 flex justify-center flex-wrap gap-4">
         {/* Cards */}
-        {coursesPrices.map(value=>(
-          <CoursesCards {...value} key={value.price}/>
+        {coursesPrices.map((value) => (
+          <CoursesCards {...value} key={value.price} />
         ))}
       </div>
     </section>
   );
 };
 export default CarInitial;
-
-/* <div className='flex flex-col items-center px-4 py-6 border border-violet-600 rounded-md bg-violet-200'>
-
-          </div> */

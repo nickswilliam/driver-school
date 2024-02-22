@@ -13,13 +13,14 @@ export const Header = () => {
   const [isDropDown, setIsDropDown] = useState(false);
   const handleMenu = () => setIsDropDown((prev) => !prev);
   const toggleMenu = () => setToggle((prev) => !prev);
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
   const path = usePathname();
 
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
-    
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setScrolling(true);
@@ -34,7 +35,6 @@ export const Header = () => {
 
       if (newWindowWidth > 1024 && toggle) {
         setToggle(false);
-    
       }
     };
 
@@ -45,7 +45,6 @@ export const Header = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [toggle]);
-
 
   return (
     <header
@@ -71,21 +70,27 @@ export const Header = () => {
             onClick={toggleMenu}
           >
             <div className="flex items-center gap-3">
-            <Image src={Logo} width={30} height={30} alt="logo-footer" />
-            <div className="flex flex-col justify-center items-start">
-              <h4 className="uppercase font-bold text-sm text-pink-400">
-                Motivando
-              </h4>
-              <h5 className="uppercase font-bold text-sm text-violet-100">
-                Conductoras
-              </h5>
+              <Image src={Logo} width={30} height={30} alt="logo-footer" />
+              <div className="flex flex-col justify-center items-start">
+                <h4 className="uppercase font-bold text-sm text-pink-400">
+                  Motivando
+                </h4>
+                <h5 className="uppercase font-bold text-sm text-violet-100">
+                  Conductoras
+                </h5>
+              </div>
             </div>
-          </div>
-            <AiOutlineClose className="text-violet-100 hover:text-violet-300"/>
+            <AiOutlineClose className="text-violet-100 hover:text-violet-300" />
           </li>
 
           <li>
-            <Link href="/" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
+            <Link
+              href="/"
+              className="hover:text-pink-700"
+              onClick={() => {
+                toggle && setToggle(false);
+              }}
+            >
               Inicio
             </Link>
           </li>
@@ -99,7 +104,14 @@ export const Header = () => {
           >
             {/* text - cursos */}
             <span className="hover:text-pink-700 flex gap-1 items-center text-center">
-              <Link href="/courses" onClick={()=>{toggle && setToggle(false)}}>Cursos</Link>
+              <Link
+                href="/courses"
+                onClick={() => {
+                  toggle && setToggle(false);
+                }}
+              >
+                Cursos
+              </Link>
               <FaAngleDown />
             </span>
 
@@ -113,42 +125,80 @@ export const Header = () => {
                 }`}
               >
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/car-initial" onClick={()=>{toggle && setToggle(false) }}>
-                    Practicas de Auto - Inicial
+                  <Link
+                    href="/courses/car-initial"
+                    onClick={() => {
+                      toggle && setToggle(false);
+                    }}
+                  >
+                    Practicas de Auto
+                  </Link>
+                </li>
+
+                <li className="hover:text-pink-700">
+                  <Link
+                    href="/courses/exam"
+                    onClick={() => {
+                      toggle && setToggle(false);
+                    }}
+                  >
+                    Examen de Manejo
                   </Link>
                 </li>
                 <li className="hover:text-pink-700">
-                  <Link href="/courses/car-medium" onClick={()=>{toggle && setToggle(false) }}>
-                    Practicas de Auto - Intermedio{" "}
+                  <Link
+                    href="/courses/content"
+                    onClick={() => {
+                      toggle && setToggle(false);
+                    }}
+                  >
+                    Contenido teórico
                   </Link>
-                </li>
-                <li className="hover:text-pink-700">
-                  <Link href="/courses/exam" onClick={()=>{toggle && setToggle(false) }}>Examen de Manejo</Link>
-                </li>
-                <li className="hover:text-pink-700">
-                  <Link href="/courses/content" onClick={()=>{toggle && setToggle(false) }}>Contenido teórico</Link>
                 </li>
               </ul>
             )}
-            
           </li>
           <li>
-            <Link href="/appoint" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
+            <Link
+              href="/appoint"
+              className="hover:text-pink-700"
+              onClick={() => {
+                toggle && setToggle(false);
+              }}
+            >
               Reservar
             </Link>
           </li>
           <li>
-            <Link href="/payments" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
+            <Link
+              href="/payments"
+              className="hover:text-pink-700"
+              onClick={() => {
+                toggle && setToggle(false);
+              }}
+            >
               Pagos
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
+            <Link
+              href="/gallery"
+              className="hover:text-pink-700"
+              onClick={() => {
+                toggle && setToggle(false);
+              }}
+            >
               Galería
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-pink-700" onClick={()=>{toggle && setToggle(false)}}>
+            <Link
+              href="/contact"
+              className="hover:text-pink-700"
+              onClick={() => {
+                toggle && setToggle(false);
+              }}
+            >
               Contacto
             </Link>
           </li>
@@ -158,7 +208,12 @@ export const Header = () => {
           <FaBars className="text-purple-100" size={26} />
         </button>
       </nav>
-      {toggle && <div className="w-full z-10 bg-slate-900/70 h-screen fixed top-0 left-0" onClick={toggleMenu}></div>}
+      {toggle && (
+        <div
+          className="w-full z-10 bg-slate-900/70 h-screen fixed top-0 left-0"
+          onClick={toggleMenu}
+        ></div>
+      )}
     </header>
   );
 };
