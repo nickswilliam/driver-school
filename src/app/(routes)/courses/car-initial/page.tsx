@@ -1,16 +1,24 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
 import { FaCalendar, FaClock } from "react-icons/fa";
 import { coursesPrices } from "@/data/car-courses-prices";
 import CoursesCards from "@/components/CoursesCards/CoursesCards";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+
 const CarInitial = () => {
+  useEffect(()=> {
+    AOS.init();
+  }, [])
   return (
     <section className="w-full flex flex-col gap-4 bg-violet-100 pb-12">
       {/* top title */}
       <div className="bg-violet-300/70 px-5 sm:px-10 py-2 flex flex-col gap">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-pink-600">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase text-pink-600 animate__animated animate__fadeInLeftBig">
           Practicas de Auto:
         </h2>
-        <h3 className="text-xl text-gray-600 font-semibold">
+        <h3 className="text-xl text-gray-600 font-semibold animate__animated animate__fadeInLeft animation__delay-1s">
           Inicial - Intermedio - Avanzado
         </h3>
       </div>
@@ -22,9 +30,9 @@ const CarInitial = () => {
           <img
             src="https://res.cloudinary.com/dymyb2f2i/image/upload/v1708290265/driving-school/zoi7ilcsk5wgmnlqnin9.png"
             alt="car-course-img"
-            className="w-[500px] object-fill object-center"
+            className="w-[500px] object-fill object-center animate__animated animate__fadeInUp"
           />
-          <p className="text-xl text-violet-700">
+          <p className="text-xl text-violet-700 animate__animated animate__fadeInUp animate__slow">
             Los cursos de manejo son con clases a domicilio, dentro de Capital
             Federal y Gran Buenos Aires. Las clases se brindan en espacios de
             tránsito real o bien en pista de aprendizaje, dependiendo en la zona
@@ -34,11 +42,11 @@ const CarInitial = () => {
         </div>
 
         {/* sub title - and paragraph */}
-        <h2 className="text-3xl sm:text-4xl font-semibold text-pink-600 text-center">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-pink-600 text-center" data-aos="fade-up">
           ¿Que aprenderas en nuestro{" "}
           <span className="text-blue-700">Curso?</span>
         </h2>
-        <p className="text-lg sm:text-xl text-center">
+        <p className="text-lg sm:text-xl text-center" data-aos="fade-left">
           Aprenderas a dar tus primeros pasos en la conducción, si es la primera
           vez que vas a manejar. En el caso de que ya cuentes con algo de
           experiencia, se lo podés comentar a tu instructora, y las clases se

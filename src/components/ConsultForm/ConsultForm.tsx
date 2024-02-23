@@ -23,10 +23,10 @@ const formSchema = z.object({
     .string({ required_error: "Es obligatorio ingresar el nombre y apellido" })
     .min(4, { message: "Debe ingresar al menos 4 caracteres" }),
   phone: z
-    .number()
+    .number({required_error: "El número de teléfono es obligatorio"})
     .max(10, { message: "El número debe contener 10 caracteres como máximo*" })
     .min(10, { message: "El número debe contener 10 caracteres como mínimo*" }),
-  email: z.string().email({ message: "El email ingresado es invalido." }),
+  email: z.string({required_error: "El E-mail es obligatorio."}).email({ message: "El email ingresado es invalido." }),
   courseNumber: z.string(),
 });
 
