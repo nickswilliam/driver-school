@@ -29,6 +29,12 @@ export const Header = () => {
       }
     };
 
+    if(!toggle){
+      document.body.style.overflow = 'auto';
+    } else{
+      document.body.style.overflow = 'hidden';
+    }
+
     const handleResize = () => {
       const newWindowWidth = window.innerWidth;
       setWindowWidth(newWindowWidth);

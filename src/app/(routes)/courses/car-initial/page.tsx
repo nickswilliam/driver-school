@@ -8,9 +8,11 @@ import 'aos/dist/aos.css'
 import { useEffect } from "react";
 
 const CarInitial = () => {
-  useEffect(()=> {
-    AOS.init();
+  useEffect(()=>{
+    AOS.init()
   }, [])
+
+
   return (
     <section className="w-full flex flex-col gap-4 bg-violet-100 pb-12">
       {/* top title */}
@@ -42,11 +44,12 @@ const CarInitial = () => {
         </div>
 
         {/* sub title - and paragraph */}
-        <h2 className="text-3xl sm:text-4xl font-semibold text-pink-600 text-center" data-aos="fade-up">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-pink-600 text-center" data-aos="fade-up" data-aos-duration="800">
           ¿Que aprenderas en nuestro{" "}
           <span className="text-blue-700">Curso?</span>
         </h2>
-        <p className="text-lg sm:text-xl text-center" data-aos="fade-left">
+        <p className="text-lg sm:text-xl text-center" data-aos="fade-left"
+        data-aos-duration="900">
           Aprenderas a dar tus primeros pasos en la conducción, si es la primera
           vez que vas a manejar. En el caso de que ya cuentes con algo de
           experiencia, se lo podés comentar a tu instructora, y las clases se
@@ -57,13 +60,13 @@ const CarInitial = () => {
 
         {/* second sub title */}
         <div className="mt-10 flex flex-col gap-6">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-violet-500 text-center">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-violet-500 text-center" data-aos="fade-down" data-aos-duration="800">
             ¿Cual es la disponibilidad{" "}
             <span className="text-pink-600">horaria?</span>
           </h2>
 
           {/* cards hour - container */}
-          <div className="flex items-center justify-center gap-4 flex-wrap">
+          <div className="flex items-center justify-center gap-4 flex-wrap" data-aos="zoom-in" data-aos-duration="800">
             {/* card 01 */}
             <div className="flex flex-col items-center justify-center gap-3 max-w-60 rounded-md border px-3 py-2 border-pink-400 h-52">
               <FaCalendar className="text-3xl text-pink-600" />
@@ -98,6 +101,7 @@ const CarInitial = () => {
           <CoursesCards {...value} key={value.price} />
         ))}
       </div>
+
     </section>
   );
 };

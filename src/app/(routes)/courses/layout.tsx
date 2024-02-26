@@ -1,9 +1,12 @@
 "use client";
+import { MiniModal } from "@/components/modals/MiniModal/MiniModal";
+import { useModalContext } from "@/context/ModalContext";
 import  Coursescontainer from "@/pages/Courses/Courses";
 import { usePathname } from "next/navigation";
 
 const CourseLayout = ({ children }: { children: React.ReactNode }) => {
   const path = usePathname();
+  const {isModal} = useModalContext()
   return (
     <Coursescontainer>
       <section className="w-full h-5/6 relative pt-6 sm:pt-10 px-5 sm:px-10 flex flex-col items-center">
@@ -21,6 +24,8 @@ const CourseLayout = ({ children }: { children: React.ReactNode }) => {
       
 
       {path !== "/courses" && children}
+
+      {isModal && <MiniModal/>}
     </Coursescontainer>
   );
 };
