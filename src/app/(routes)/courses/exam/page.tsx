@@ -35,7 +35,7 @@ const Exam = () => {
           <img
             src="https://assets.entrepreneur.com/content/3x2/2000/1614892837-GettyImages-1172770253.jpg"
             alt="car-course-img"
-            className="w-[500px] object-fill object-center animate__animated animate__fadeInUp rounded-l-full shadow-xl"
+            className="w-[500px] object-fill object-center animate__animated animate__pulse animate__infinite animate__slow rounded-full shadow-xl"
           />
         </div>
 
@@ -53,7 +53,7 @@ const Exam = () => {
           <img
             src="https://media.gettyimages.com/id/648946918/es/foto/casual-start-up-businesswomen-talking.jpg?s=612x612&w=0&k=20&c=ZNRWRm6bQ1DMbBXaTDEhP6z6ZvyNLI2qNwpnvc9q-6A="
             alt="car-course-img"
-            className="w-[500px] object-fill object-center rounded-full shadow-xl"
+            className="w-[500px] object-fill object-center rounded-[40%] shadow-xl"
             data-aos="flip-right"
             data-aos-duration="900"
           />
@@ -82,9 +82,17 @@ const Exam = () => {
         </div>
       </div>
       |
-      <h2 className="mb-10 -mt-10 text-center text-4xl font-semibold text-violet-500">
+      <h2
+        className="mb-10 -mt-10 text-center text-3xl font-semibold text-violet-500"
+        data-aos="fade-down"
+        data-aos-duration="800"
+      >
         Para más información,{" "}
-        <Link href="/courses/contact" className="text-pink-500" title="Ir a: Contacto">
+        <Link
+          href="/contact"
+          className="text-pink-500 italic border-b border-dotted border-pink-500 hover:text-pink-400 hover:border-pink-400 duration-150"
+          title="Ir a: Contacto"
+        >
           contactanos.
         </Link>
       </h2>

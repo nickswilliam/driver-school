@@ -91,7 +91,10 @@ const CarInitial = () => {
         </div>
       </div>
 
-      <h2 className="text-center text-5xl font-semibold text-pink-600">
+      <h2 className="text-center text-5xl font-semibold text-pink-600"
+      data-aos="fade-down"
+      data-aos-duration="800"
+      >
         Precios de los cursos
       </h2>
       {/* cards prices - container*/}
