@@ -32,8 +32,6 @@ const CoursesCards = ({
     <div
       className="flex flex-col max-w-[370px] items-center justify-between px-6 py-6 gap-2 border border-pink-500 shadow-lg rounded-md bg-violet-100 hover:shadow-pink-500 duration-200 hover:shadow-xl"
       key={id}
-      data-aos={`${id % 2 === 0 ? "flip-right" : "flip-left"}`}
-      data-aos-duration="700"
     >
       <h3 className="text-pink-500 text-[18px]">{title}</h3>
       <span className="mt-8 text-5xl text-pink-600 font-bold px-4 border-b border-pink-400 pb-4">
