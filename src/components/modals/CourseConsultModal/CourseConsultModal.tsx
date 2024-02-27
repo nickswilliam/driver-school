@@ -13,9 +13,9 @@ export const CourseConsultModal = ({ id, title, price, setIsModal }: CourseConsu
   const data = {id, title, price, setIsModal}
   return (
     <div
-      className="flex justify-center items-center fixed top-0 left-0 h-screen w-full text-white z-20 px-5 animate__animated animate__zoomIn animate__faster"
+      className="flex justify-center items-center fixed top-0 left-0 h-screen w-full text-white z-20 px-5"
     >
-      <div className="top-12 bg-violet-50/90 w-full max-w-[650px] rounded-md backdrop-blur-sm flex flex-wrap flex-col items-center px-12 py-6 sm:py-10 gap-4 z-50">
+      <div className="top-12 bg-violet-50/90 w-full max-w-[650px] rounded-md backdrop-blur-sm flex flex-wrap flex-col items-center px-12 py-6 sm:py-10 gap-4 z-50 duration-100">
         <button
           className="self-end"
           onClick={() => setIsModal(false)}

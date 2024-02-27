@@ -1,12 +1,12 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import z, { string } from "zod";
+import z from "zod";
+import { useToast } from "@chakra-ui/react";
 
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -15,7 +15,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { CourseConsultTypes } from "../modals/CourseConsultModal/CourseConsultModal";
 import { PHONE_REGEXP } from "@/lib/utils";
-import { useModalContext } from "@/context/ModalContext";
 
 const formSchema = z.object({
   name: z
@@ -39,7 +38,7 @@ export const ConsultForm = ({
   title,
   setIsModal,
 }: CourseConsultTypes) => {
-  const {isModal: isModalMini, setIsModal: setIsModalMini} = useModalContext();
+  const toast = useToast();
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -47,7 +46,7 @@ export const ConsultForm = ({
       name: "",
       phone: "",
       email: "",
-      courseNumber: `${title} ${price}`,
+      courseNumber: "",
     },
   });
 
@@ -56,10 +55,15 @@ export const ConsultForm = ({
     form.reset()
 
     setIsModal(false)
-    setIsModalMini(true);
-  };
 
-  const onReset = 1
+    toast({
+      title: "Consulta realizada",
+        description: "Hemos recibido tu consulta.",
+        status: "success",
+        duration: 3500,
+        isClosable: true,
+    })
+  };
   
   return (
     <Form {...form}>

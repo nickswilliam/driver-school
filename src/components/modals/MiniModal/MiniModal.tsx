@@ -1,20 +1,29 @@
-import { useToast, Button } from '@chakra-ui/react'
-import { useModalContext } from '@/context/ModalContext';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useToast } from "@chakra-ui/react";
+import { useModalContext } from "@/context/ModalContext";
+import { useEffect } from "react";
 
 export const MiniModal = () => {
-    const {isModal, setIsModal} = useModalContext();
-    const toast = useToast();
-  return <Button
-  onClick={() =>
-    toast({
-      title: 'Account created.',
-      description: "We've created your account for you.",
-      status: 'success',
-      duration: 3000,
-      isClosable: true,
-    })
-  }
->
-  Show Toast
-</Button>
+  const { isModal, setIsModal } = useModalContext();
+  const toast = useToast();
+
+  useEffect(() => {
+      toast({
+        title: "Consulta realizada",
+        description: "Hemos recibido tu consulta.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+
+      setTimeout(()=>{
+        setIsModal(false)
+      }, 2900)
+    
+    
+    console.log(isModal, 'mini modal');
+  }, []);
+  
+  
+  return <></>;
 };

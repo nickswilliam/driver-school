@@ -6,7 +6,8 @@ import HeaderContact from "@/components/Header/HeaderContact";
 import "animate.css";
 import Footer from "@/components/Footer/Footer";
 import { ModalContextProvider } from "@/context/ModalContext";
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from "@chakra-ui/react";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,15 +21,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
     <html lang="en">
       <body className={inter.className}>
         <ModalContextProvider>
           <ChakraProvider>
-          <HeaderContact />
-          <Header />
-          {children}
-          <Footer />
+            <HeaderContact />
+            <Header />
+            {children}
+            <Footer />
           </ChakraProvider>
         </ModalContextProvider>
       </body>
