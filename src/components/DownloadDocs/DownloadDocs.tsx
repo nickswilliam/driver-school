@@ -14,6 +14,7 @@ export const DownloadDocs = ({
     const link = document.createElement("a");
 
     link.href = urlDoc;
+    link.target = "_blank"
     link.download = fileName;
 
     document.body.appendChild(link);
