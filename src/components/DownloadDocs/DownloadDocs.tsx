@@ -14,7 +14,7 @@ export const DownloadDocs = ({
     const link = document.createElement("a");
 
     link.href = urlDoc;
-    link.target = "_blank"
+    link.target = "_blank";
     link.download = fileName;
 
     document.body.appendChild(link);
@@ -23,9 +23,11 @@ export const DownloadDocs = ({
   };
   return (
     <div
-      className="cursor-pointer flex flex-col gap-6 text-center items-center justify-center bg-violet-200 border border-violet-300 w-full sm:max-w-[300px] h-60 sm:h-72 py-6 px-4 rounded-md shadow-xl"
+      className="cursor-pointer flex flex-col gap-6 text-center items-center justify-center bg-violet-200 border border-violet-300 w-full sm:max-w-[300px] h-60 sm:h-72 py-6 px-4 rounded-md shadow-xl hover:shawdow-2xl hover:shadow-violet-500 duration-200 ease-in"
       title={`Descargar: ${title}`}
       onClick={downloadDocument}
+      data-aos={`${id % 2 === 0 ? "flip-left" : "flip-right"}`}
+      data-aos-duration="800"
     >
       {/* container icons */}
       <div className="text-xl sm:text-2xl p-4 bg-violet-400 rounded-md text-violet-100">
