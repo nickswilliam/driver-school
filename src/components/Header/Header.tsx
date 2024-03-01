@@ -17,7 +17,6 @@ export const Header = () => {
     typeof window !== "undefined" ? window.innerWidth : 0
   );
   const path = usePathname();
-
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
@@ -29,10 +28,10 @@ export const Header = () => {
       }
     };
 
-    if(!toggle){
-      document.body.style.overflow = 'auto';
-    } else{
-      document.body.style.overflow = 'hidden';
+    if (!toggle) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
     }
 
     const handleResize = () => {
@@ -55,10 +54,15 @@ export const Header = () => {
   return (
     <header
       className={`transition-all ease-in delay-200 ${
-        scrolling ? "bg-violet-700/70 backdrop-blur-sm" : "bg-transparent"
+        scrolling ? "bg-violet-700/90 backdrop-blur-md" : "bg-transparent"
+      }, ${
+        path !== "/" && path !== '/courses' && "bg-violet-700 backdrop-blur-md"
       } flex w-full h-16 justify-between items-center px-8 md:px-20 py-2 z-20 sticky top-0`}
     >
-      <Image alt="logo-img" src={Logo} height={40} width={40} />
+      {" "}
+      <Link href="/">
+        <Image alt="logo-img" src={Logo} height={40} width={40} />
+      </Link>
       {/* Header Navs */}
       <nav>
         {/*nav - menu */}
