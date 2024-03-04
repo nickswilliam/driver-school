@@ -1,17 +1,3 @@
-export interface ListItems  {
-  item: string;
-  id: number;
-}
-
-export interface CoursesPrices {
-  id: number;
-  title: string;
-  price: number;
-  btnText: string;
-  listItems: ListItems[]
-}
-
-
 export const coursesPrices = [
   {
     id: 1,

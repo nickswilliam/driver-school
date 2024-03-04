@@ -1,6 +1,11 @@
+import TitleHeaderOfPage from "@/components/TitleHeaderOfPage/TitleHeaderOfPage"
+import GalleryContainer from "@/pages/Appoint/Appoint"
+
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <GalleryContainer>
+      <TitleHeaderOfPage title="Galeria" bgColor="bg-violet-400"/>
+    </GalleryContainer>
   )
 }
 export default Gallery

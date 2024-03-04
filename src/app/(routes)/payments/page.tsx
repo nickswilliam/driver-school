@@ -1,6 +1,13 @@
+import TitleHeaderOfPage from "@/components/TitleHeaderOfPage/TitleHeaderOfPage";
+import PaymentsContainer from "@/pages/Appoint/Appoint";
+
 const Payments = () => {
   return (
-    <div>Payments</div>
-  )
-}
-export default Payments
+    <PaymentsContainer>
+      <section className="w-full flex flex-col">
+        <TitleHeaderOfPage bgColor="bg-indigo-950" title="Pagos en Linea" />
+      </section>
+    </PaymentsContainer>
+  );
+};
+export default Payments;

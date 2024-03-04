@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
 import {
   Accordion,
   AccordionContent,

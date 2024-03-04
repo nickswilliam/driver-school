@@ -13,7 +13,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { CourseConsultTypes } from "../modals/CourseConsultModal/CourseConsultModal";
+import { CourseConsultTypes } from "@/types/types";
 import { PHONE_REGEXP } from "@/lib/utils";
 
 const formSchema = z.object({

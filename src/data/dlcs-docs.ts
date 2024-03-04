@@ -1,11 +1,3 @@
-export interface DLCsDocumentsListType {
-    id: number;
-    title: string;
-    description: string;
-    url: string;
-    fileName: string;
-}
-
 export const dlcsDocumentsList = [
   {
     id: 1,
@@ -28,5 +20,5 @@ export const dlcsDocumentsList = [
     description: "Todas las señales de tránsito y su significado.",
     url: "https://driver-school.vercel.app/dlc/señales-mvc.pdf",
     fileName: "señales-mvc.pdf",
-  }
+  },
 ];

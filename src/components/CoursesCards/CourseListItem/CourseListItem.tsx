@@ -1,4 +1,4 @@
-import { ListItems } from "@/data/car-courses-prices"
+import { ListItems } from "@/types/types"
 
 export const CourseListItem = ({id, item}: ListItems) => {
   return (

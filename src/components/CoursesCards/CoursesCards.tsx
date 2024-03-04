@@ -1,5 +1,5 @@
 "use client";
-import { CoursesPrices } from "@/data/car-courses-prices";
+import { CoursesPrices } from "@/types/types";
 import { CourseListItem } from "./CourseListItem/CourseListItem";
 import { CourseConsultModal } from "../modals/CourseConsultModal/CourseConsultModal";
 import { useEffect, useState } from "react";

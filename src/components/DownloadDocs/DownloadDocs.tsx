@@ -1,5 +1,5 @@
 "use client";
-import { DLCsDocumentsListType } from "@/data/dlcs-docs";
+import { DLCsDocumentsListType } from "@/types/types";
 import { FaBook, FaList, FaMinusCircle } from "react-icons/fa";
 
 export const DownloadDocs = ({

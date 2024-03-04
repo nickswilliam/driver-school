@@ -1,13 +1,7 @@
 import { ConsultForm } from "@/components/ConsultForm/ConsultForm";
-import { Dispatch, SetStateAction } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { CourseConsultTypes } from "@/types/types";
 
-export interface CourseConsultTypes {
-  id: number;
-  title: string;
-  price: number;
-  setIsModal: Dispatch<SetStateAction<boolean>>;
-}
 
 export const CourseConsultModal = ({ id, title, price, setIsModal }: CourseConsultTypes) => {
   const data = {id, title, price, setIsModal}

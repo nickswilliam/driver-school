@@ -14,6 +14,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Academia de Manejo",
   description: "Driving academy for women by women.",
+  icons: {
+    icon: "/src/assets/logo/logo.svg"
+  }
 };
 
 export default function RootLayout({

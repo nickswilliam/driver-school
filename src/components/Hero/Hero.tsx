@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
+import { FaCaretLeft } from "react-icons/fa";
 import { heroList } from "@/data/hero-list-courses";
 import Link from "next/link";
 

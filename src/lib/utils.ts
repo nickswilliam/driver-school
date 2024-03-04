@@ -6,3 +6,6 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const PHONE_REGEXP = /^\d{10}$/
+
+export const pathsWithBg = ["/appoint", "/gallery", "/contact", "/payments"]
+

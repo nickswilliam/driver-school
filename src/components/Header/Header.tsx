@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 import { FaBars, FaAngleDown } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import { pathsWithBg } from "@/lib/utils";
 
 export const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -51,12 +52,14 @@ export const Header = () => {
     };
   }, [toggle]);
 
+
   return (
     <header
       className={`transition-all ease-in delay-200 ${
-        scrolling ? "bg-violet-700/90 backdrop-blur-md" : "bg-transparent"
+        scrolling && "bg-violet-700/90 backdrop-blur-md"
       }, ${
-        path !== "/" && path !== '/courses' && "bg-violet-700 backdrop-blur-md"
+        pathsWithBg.some((item) => item === path) ?
+        "bg-violet-700 backdrop-blur-md" : "bg-transparent"
       } flex w-full h-16 justify-between items-center px-8 md:px-20 py-2 z-20 sticky top-0`}
     >
       {" "}
